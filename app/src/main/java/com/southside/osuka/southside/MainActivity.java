@@ -75,6 +75,44 @@ public class MainActivity extends AppCompatActivity
         tabLayout.setSelectedTabIndicatorColor(ContextCompat.getColor(this, R.color.indicator));
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                switch (position){
+                    case 0:
+                        /*
+                        setting Home as White and rest grey
+                        and like wise for all other positions
+                         */
+                        home.setIcon(R.drawable.ic_home_white);
+                        inbox.setIcon(R.drawable.ic_inbox_black);
+                        star.setIcon(R.drawable.ic_stars_black);
+                        break;
+                    case 1:
+                        home.setIcon(R.drawable.ic_home_black);
+                        inbox.setIcon(R.drawable.ic_inbox_white);
+                        star.setIcon(R.drawable.ic_stars_black);
+                        break;
+                    case 2:
+                        home.setIcon(R.drawable.ic_home_black);
+                        inbox.setIcon(R.drawable.ic_inbox_black);
+                        star.setIcon(R.drawable.ic_stars_black);
+                        break;
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+
 
     }
 
