@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity
         final TabLayout.Tab inbox = tabLayout.newTab();
         final TabLayout.Tab star = tabLayout.newTab();
 
-        home.setText("Home");
-        inbox.setText("Inbox");
-        star.setText("Star");
+        home.setIcon(R.drawable.ic_home_white);
+        inbox.setIcon(R.drawable.ic_home_black);
+        star.setIcon(R.drawable.ic_stars_black);
 
         tabLayout.addTab(home, 0);
         tabLayout.addTab(inbox, 1);
